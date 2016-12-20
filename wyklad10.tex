@@ -1,0 +1,200 @@
+% Nazwę pliku proszę zmienić na własne imię i nazwisko (bez znaków
+% diakrytycznych).
+% Kompilować poleceniem pdflatex (sprawdzono w instalacji TeX Live 2014,
+% zob. https://www.tug.org/texlive/)
+
+% Możliwe opcje klasy: polish, english, russian — wybór języka eseju.
+\documentclass[polish]{kbk}
+\usepackage{amsmath}
+\begin{document}
+
+\author{Imię i~nazwisko autora}
+\title{Analiza numeryczna L 2016/2017}
+
+% Tytuł bez formatowania do żywej paginy. Może być skrócony, jeśli się
+% nie mieści. Opcjonalny.
+%\titlerunning{}
+
+% Adres e-mail. Opcjonalny.
+\email{https://github.com/mtszpater/Analiza-numeryczna-L}
+
+\maketitle
+
+\section{Wielomianowa aproksymacja średnio kwadratowa na zbiorze dyskretnym}
+
+\begin{center}
+\textbf{Zadanie}
+\end{center}
+Ustalmy liczbę naturalną  \(m\) . Niech dana będzie funkcja \(f\) o znanych wartościach dla argumentów parami różnych \(x_0, x_1, ... , x_N\) tzn. 
+ \(y_k = f(x_k), (k =0,...,N) \) są dane.\\
+Skonstruować taki wielomian \(   w^{*}_m \in \Pi_{m}  \), że:
+$$ || f -  w^{*}_m ||_2 = min_{ w_m \in \Pi_m } || f - w_m||_2 = min_{ w_m \in \Pi_m } \sqrt{  \sum_{k=0}^{\infty} (y_k - w_n (x_k))^2 }$$
+\\
+\\
+Pokażemy jak szybko i efektywnie numerycznie znaleźć \(W^{*}_n \) bez konieczności rozwiązywania układów równań normalnych
+W tym celu musimy wprowadzić szereg różnych narzędzi.
+\\
+\begin{center}
+\textbf{Definicja - Dyskretny iloczyn skalarny}
+\end{center}
+
+Dyskretnym iloczynem skalarnym funkcji \(f\) i \(g\) określony na zbiorze  \(x_0, x_1, ... , x_N\) nazywamy wyrażenie postaci
+$$ (f,g)_N =  \sum_{k=0}^{N} f(x_k)  g(x_k) $$
+
+
+\begin{center}
+\textbf{Własności - Dyskretny iloczyn skalarny}
+\end{center}
+$$ (f,f)_N \geq 0 \quad (f,f)_N = 0  \leftrightarrow  f(x_k) = 0  \quad k = 0,...,N$$
+$$ (f,g)_N = (g,f)_N $$
+$$ (\alpha f,g)_N = \alpha (f,g)_N $$
+$$ (f+h, g)_N = (f,g)_N + (h,g)_N $$
+$$ ||f||_2 = \sqrt { (f,f) } $$ 
+
+\begin{center}
+\textbf{Definicja - Ortogonalność}
+\end{center}
+Mówimy, że funkcje \(f,g\) są ortogonalne względem iloczynu skalarnego wtw. gdy \( (f,g) = 0 \) \\ \\
+\textbf{Przykład} \\
+$$ (f,g)_N = \sum_{k=0}^{3} f(x_k)g(x_k) \quad  \quad x_0 = 0,  \quad x_1 = \frac{1}{3},  \quad x_2 = \frac{2}{3},  \quad x_3 = 1 $$
+$$ f(x) = \cos{2x} $$
+$$ g(x) = x^2 - \frac{13}{9}x $$
+Sprawdźmy, że \(f,g\) są ortogonalne przy takim wyborze iloczynu skalarnego.
+$$ f(x_0)g(x_0) = 0 $$
+$$ f(x_1)g(x_1) = \frac{5}{27} $$
+$$ f(x_2)g(x_2) = - \frac{7}{27} $$
+$$ f(x_3)g(x_3) = - \frac{4}{9} $$
+
+$$(f,g) = 0 + \frac{5}{27}  - \frac{7}{27} - \frac{4}{9} = 0 $$
+
+
+\begin{center}
+\textbf{Definicja - ortogonalny układ funkcji}
+\end{center}
+Mówimy, że układ funkcji \( (f_0, f_1,..., f_m)  \quad m \in N \) nazywamy układem ortogonalnym względem iloczynu skalarnego jeśli
+  \[
+    \left\{\begin{array}{lr}
+        (f_i, f_j)_n = 0 & i \neq j\\
+        (f_i, f_i)_N = 0 \\
+        \end{array}\right\} 
+  \]
+  
+  Dowolny układ funkcji liniowo niezależnych \( y_0, y_1, ..., y_m\) można zortogonalizować. Służy do tego proces ortogonalizacji Grama-Schmidta.\\
+  \textbf{Algorytm ortogonalizacji} \\
+    \[
+    \left\{\begin{array}{lr}
+        f_0(x) = g_0(x) \\
+        f_k(x) = g_k(x) -  \sum_{j=0}^{k-1}  \frac { (g_k, f_j)_N } { (f_j, f_j)_N } f_j(x)  \\
+        \end{array}\right\} 
+  \]
+  \textbf{Koszt} : trzeba wyznaczyć O(\(m^2\)) iloczynów skalarnych \\
+  
+  W wyniku procesu ortogonalizacji otrzymujemy układ funkcji \(f_0, f_1, ... , f_N \) spełniający warunki
+  $$ LIN ( f_0, ... f_N ) = LIN ( g_0,...,g_N )  $$
+  $$ (f_i, f_j)_N = 0 \quad i \neq j $$
+  
+  \textbf{Uwaga} proces ortogonalizacji Grama-Schmidta może być użyty np. do zortonormalizowania układu \( (1,x, x^2, ... , x^m) \) Otrzymujemy wtedy bazę ortogonalną przestrzeni \( \Pi_m \) \\
+  
+  \textbf{Przykład} \\
+  
+  $$ (f,g)_N =  \sum_{k=0}^{3} f(x_k)g(x_k) \quad x_0 = 0 \quad x_1 = \frac{1}{3} \quad x_2 = \frac{2}{3} \quad x_3 = 1 $$  
+  Znajdziemy bazę ortogonalną przestrzeni \( \Pi_3 \) \\
+  $$ g_0(x) = 1 \quad g_1(x) = x \quad g_2(x) = x^2 \quad g_3(x) = x^3 $$
+  $$ f_0(x) = g_0(x) = 1 $$
+  $$ f_1(x) = g_1(x) - \frac{ (g_1, f_0)_N } { (f_0, f_0)_N } f_0(x) = x - \frac{1}{2} $$
+  $$ f_2(x) = g_2(x) - \frac{ (g_2, f_0)_N } { (f_0, f_0)_N } f_0(x) -  \frac{ (g_2, f_1)_N } { (f_1, f_1)_N } f_1(x) = x^2 - x + \frac{1}{9} $$
+  $$ f_3(x) = g_3(x) - \frac{ (g_3, f_0)_N } { (f_0, f_0)_N } f_0(x) -  \frac{ (g_3, f_1)_N } { (f_1, f_1)_N } f_1(x) -  \frac{ (g_3, f_2)_N } { (f_2, f_2)_N } f_2(x) = x^3 - \frac{ 3} {2}x^2 + \frac{47}{90} $$
+
+Można teraz sprawdzić, że
+$$ LIN ( f_0, f_1, f_2, f_3 ) = \Pi_3 $$
+$$ (f_i, f_j) = 0 \quad i \neq j $$
+$$ (f_0, f_0) = 4 $$
+$$ (f_1, f_1) = \frac{5}{9} $$
+$$ (f_2, f_2) = \frac{4}{81} $$
+$$ (f_3, f_3) = \frac{1}{405} $$
+
+  \textbf{Definicja} \\
+  Ciąg wielomianów \( P_0, ..., P_m \) nazywamy ciągiem wielomianów ortogonalnych, jeśli \\stopien(\(P_k\)) = k
+  $$ P_k  \in \frac{\Pi_k}{ \Pi_{k-1}} $$
+      \[
+   oraz \left\{\begin{array}{lr}
+        (P_i, P_j)_N = 0 \quad i \neq j \\
+       (P_i, P_i)_N > 0
+        \end{array}\right\} 
+  \]
+  Przy ustalonym iloczynie skalarnym ciąg wielomianów ortogonalnych jest określony jednoznacznie (z dokładnością do mnożnika).\\
+
+  \textbf{Twierdzenie} \\
+  Niech ciąg wielomianów  \( P_0, ..., P_n \) będzie określony w następujący sposób rekurencyjnie.
+  
+        \[
+	\left\{\begin{array}{lr}
+	 P_0(x) = 1 \\
+	 P_1(x) = x-c_1 \\
+	 P_k(x) = (x-c_k)P_{k-1}(x) -d_kP_{k-2}(x)     
+        \end{array}\right\} 
+  \]
+  
+  $$ c_k = \frac { (xP_{k-1}, P_{k-1})_N }{ (P_{k-1}, P_{k-1})_N } \quad \quad d_k = \frac { (P_{k-1}, P_{k-1} )_N } { (P_{k-2}, P_{k-2})_N} $$
+  
+  Ciąg  \( P_0, ..., P_n \) jest ciągiem wielomianów ortogonalnych względem iloczynu skalarnego tzn. 
+  
+          \[
+	\left\{\begin{array}{lr}
+	 P_k \in \frac{ \Pi_k}{ \Pi_{k-1} }  \\
+	 (P_k, P_l)_N = 0 \quad k \neq l \\
+	 (P_k, P_k)_N > 0  
+        \end{array}\right\} 
+  \]
+  
+  Oczywiście \( LIM ( P_0, ..., P_n ) = \Pi_n \)
+  \\\\\\
+    \textbf{Wniosek} \\
+    Stosując to twierdzenie można skonstruować ciąg wielomianów ortogonalnych obliczając jedynie O(m) iloczynów skalarnych.\\
+    
+\textbf{Przykład} \\
+Użyjemy podanego twierdzenia do skonstruowania bazy ortogonalnej przestrzeni \( \Pi_3 \) względem iloczynu skalarnego postaci
+$$ (f,g)_N = \sum_{k=0}^3 f(x_k)g(x_k) \quad x_0 = 0 \quad x_1 = \frac{1}{3} \quad x_2 = \frac{2}{3} \quad x_3 = 1 $$
+$$ P_0(x) = 1 $$
+$$ P_1(x) = x - c_1 = x - \frac{ (xP_0, P_0)_N } { (P_0, P_0 )_N} = x - \frac{1}{2} $$
+$$ P_2(x) = (x-c_2)P_1(x) - d_2P_0(x) = x - \frac{ (xP_1, P_1)_N } { (P_1, P_1 )_N} P_1(x) - \frac{ (P_1, P_1 ) } { (P_0, P_0 ) } P_0(x) = x^2 - x + \frac{1}{9}$$ 
+$$ P_3(x) = (x-c_3)P_2(x) - d_3P_1(x) = x - \frac{ (xP_2, P_2)_N } { (P_2, P_2 )_N} P_2(x) - \frac{ (P_2, P_2 ) } { (P_1, P_1 ) } P_1(x) = x^3 - \frac{3}{2}x^2 + \frac{47}{90}x - \frac{1}{90}$$
+
+Kombinacja liniowa wielomianów spełniających związek rekurencyjny z twierdzenia.
+\\\\
+Rozważmy problem obliczenia wartości \( S(x) = \sum_{k=0}^N a_k Q_k(x) \) gdzie x jest ustalony oraz wielomiany \(Q_0, ... Q_N\) spełniają związek rekurencyjny postaci 
+$$ Q_0(x) = \alpha_0 \quad a_1(x) = (\alpha_1x - \beta_1)a_0(x) $$
+$$ a_k(x) = (\alpha_kx-\beta_k) a_{k-1}(x) - \gamma_k a_{k-2}(x) $$
+
+\( \alpha_k, \beta_k, \gamma_k \) są dane\\
+
+
+Zaleca się, aby wartość s(x) obliczać następującym algorytmem Clenshawa ~\cite{znaczek}
+$$B_{n-1} = B_{n-2} = 0 $$
+$$ B_k = \alpha_k + (\alpha_{k+1}x - \beta_{k+1})\beta_{k+1} - \gamma_{k+2}\beta_{k+2} $$
+Wtedy s(x) = \( \alpha_0 \beta_0 \) \\
+
+\textbf{Twierdzenie} \\
+Wielomian optymalny \( W^{*}_m \in \Pi_m \) minimalizujący wyrażenie \( || f - w_m ||_2 \) wyraża się wzorami 
+$$ W^{*}_m(x) = \sum_{k=0}^m a_kp_k(x) $$ gdzie
+\( P_0, ... P_m \) to wielomiany ortogonalne względem iloczynu skalarnego.
+$$ a_k = \frac { (f, P_k)_N }{ (P_k, P_k)_N } $$
+
+\begin{center}
+\textbf{Uwagi}
+\end{center}
+
+1. Wielomiany \(P_0, ... , P_m\) znajdujemy stosując związek rekurencyjny z twierdzenia.\\
+2. Wartość  \( W^{*}_m \) dla danego x obliczamy algorytmem Clenshawa \\
+3. Nie trzeba pamiętać jawnej postaci \(P_0, ... , P_m\)  . Wystarczy znać wartości \(P_i(x_k)\)  \\
+4. Zachodzi związek
+$$ W^{*}_m (x) = W^{*}_{m-1}(x) + \frac{ (f, P_M)_N} {(P_m, P_m)_N} P_m(x) $$
+5. Można sprawdzić
+$$ || f - W^{*}_m||_2 = \sqrt{ ||f||^2_2 - \sum_{k=0}^m \frac { (f, P_k)^{2}_N} { (P_k, P_k)_N } } $$ ~\cite{znaczek2}
+
+\begin{thebibliography}{99}
+\bibitem{znaczek} ten algorytm lepiej sie upewnić
+\bibitem{znaczek2} moze cos byc nie tak :c
+\end{thebibliography}
+
+\end{document}
