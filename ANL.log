@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.29)  20 DEC 2016 13:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.29)  20 DEC 2016 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -386,58 +386,106 @@ File: ccbynd.pdf Graphic file (type pdf)
 Package pdftex.def Info: ccbynd.pdf used on input line 21.
 (pdftex.def)             Requested size: 50.0pt x 17.49953pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 31--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 31--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./ccbynd.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
-[2] (./ANL.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
+
+ []
+
+[3] [4] (./ANL.aux) ) 
 Here is how much of TeX's memory you used:
- 5612 strings out of 493014
- 72586 string characters out of 6133350
- 144237 words of memory out of 5000000
- 9043 multiletter control sequences out of 15000+600000
- 13247 words of font info for 41 fonts, out of 8000000 for 9000
+ 5614 strings out of 493014
+ 72612 string characters out of 6133350
+ 145237 words of memory out of 5000000
+ 9044 multiletter control sequences out of 15000+600000
+ 13786 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,45p,349b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/pl/plrm.en
-c}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/pl/pltt.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/public/pl/plbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/pl/plr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/
-plr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plr17.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plss10.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/pl/plss9.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/pl/pltt12.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/pl/pltt9.pfb>
-Output written on ANL.pdf (2 pages, 144912 bytes).
+ 38i,11n,45p,349b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/pl/plr
+m.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/pl/pltt.enc}</usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/pl/plbx10.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/pl/plbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/pl/plr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/p
+lr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plr17.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plss10.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/pl/plss9.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/pl/plssi10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/pl/pltt12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/pl/pltt9.pfb>
+Output written on ANL.pdf (4 pages, 177739 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
