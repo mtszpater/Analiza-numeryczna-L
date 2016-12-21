@@ -1,0 +1,144 @@
+
+\documentclass[12pt]{article}
+\pagenumbering{gobble}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% Język
+\usepackage[polish]{babel}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[
+top    = 3.2cm,
+bottom = 2.50cm,
+left   = 3cm,
+right  = 3cm]{geometry}
+
+
+\usepackage{graphicx}
+\author{\LARGE Wykład 9}
+\title{\bfseries\Huge Analiza numeryczna L 2016/2017}
+\date{}
+
+ 
+\begin{document}
+
+\maketitle
+\section*{Aproksymacja średniokwadratowa na zbiorze dyskretnym}
+\vspace{5mm}
+\large {\textbf{Idea:} nie interpolujemy, ale wybieramy funkcję, która będzie \textit{blisko} pomiarowej \textit{chmury} punktów. Takich funkcji jest dużo. Będziemy wybierać tą, która w pewnym sensie będzie najbliższa \textit{chmurze} punktów.}
+\begin{center}
+\vspace{5mm}
+\textbf{Definicja: (dyskretna norma średniokwadratowa)}
+\end{center}
+Dla danych parami różnych punktów \(   x_0,x_1,...,x_n\) \textbf{dyskretną normą średniokwadratową} ||\(\cdot\)||\(_2\) określamy wzorem:
+\begin{center}
+$$||f||_2 = \sqrt{  \sum_{k=0}^{n} (f(x_k)^2 }$$
+\end{center}
+\textbf{Własności:}\\
+\textbf{$1^{\circ}$ }
+$$||f||_2>0,||f||_2 = 0 \Leftrightarrow f(x_k) = 0, k=0,1,...,n $$
+\textbf{$2^{\circ}$ }
+$$||\alpha f||_2 = |\alpha|||f||_2 $$
+\textbf{$3^{\circ}$ (nierówność trójkąta)}
+$$||f+g||_2 \le ||f||_2+||g||_2 $$
+\newpage
+\begin{center}
+\textbf{Zadanie (aproksymacja średniokwadratowa)}
+\end{center}
+Dla danej funkcji $ f \in F$, znajdziemy taką funkcję $g^{*} \in X$, że: 
+$$||f-g^{*}||_2 = min_{g \in X} ||f-g||$$
+\section*{Model 1:}
+$$ X = \{a: a \in R\}$$
+Jak w tej sytuacji znaleźć $w^{*}$?\\
+$$w^{*} \in X \Rightarrow w^{*}(x) = a^{*}: ||f-w^{*}||_2=min_{w \in X} ||f-w||_2 = min_{w \in X}||w-a||_2 $$
+Zauważmy, że:
+$$||f-a||^{2}_2 = \sum_{k=0}^{N} (f(x_k-a)^2= E(a)  $$
+gdzie \textbf{E} to funkcja błędu.
+Chcemy znaleźć minimum funkcji błędu:\\
+$E'(a) =0$ (warunek konieczny ekstremum)\\
+Inna notacja:
+$$\frac{\partial E(a)}{\partial a}$$
+co oznacza pochodną cząstkową względem zmiennej a funkcji E.
+$$E'(a) = -2 \sum_{k=0}^{N} (f(x_k-a)^2$$
+$$E'(a) = 0 \Leftrightarrow  \sum_{k=0}^{N} (f(x_k-a) =0  $$
+$$ \sum_{k=0}^{N} (f(x_k)-a(N+1) =0$$
+$$ a = \frac{\sum_{k=0}^{N} (f(x_k)}{N+1}$$
+w tym punkcie $a^{*}$ przyjmuje minimum.\\
+\textbf{Wniosek:} W sensie dyskretnej aproksymacji średniokwadratowej dla modelu $X= \{a:a \in R\} \equiv \sqcap_0$ funkcją najlepiej dopasowaną do danych $x_0,...,x_n$ oraz $y_0,...,y_n$ jest $w^{*} = a^{*}$, gdzie 
+$$ a^{*} = \frac{\sum_{k=0}^{N} (f(x_k)}{N+1}$$
+\section*{Model 2:}
+$$ X = \{ax^2: a \in R\}$$
+Znajdziemy takie $w^{*}= a^{*} \in X$, że:
+$$||f-w^{*}||_2=min_{w \in X} ||f-w||_2 = min_{w \in X}||f(x)-ax^2||_2 $$
+$$||f(x)-ax^2||^{2}_2 = \sum_{k=0}^{N} (y_k-ax_k^2)^2= E(a)  $$
+$$\frac{\partial E(a)}{\partial a}=-2\sum_{k=0}^{N} (y_k-ax_k)x_k^2 =0$$
+$$\sum_{k=0}^{N} (y_k-ax_k)x_k^2 =0 \Leftrightarrow a= \frac{\sum_{k=0}^{N} y_kx_k^2}{\sum_{k=0}^{N}x_k^4}$$
+\textbf{Wniosek:} elementem optymalnym w sensie aproksymacji średniokwadratowej dla danego modelu i danych pomiarowych $x_0,...,x_n$ oraz $y_0,...,y_n$ jest $w^{*} = a^{*}x^2$, gdzie:
+$$a^{*}= \frac{\sum_{k=0}^{N} y_kx_k^2}{\sum_{k=0}^{N}x_k^4}$$
+\section*{Model 3:}
+$$ X = \{ae^2: a \in R\}$$
+Znajdziemy takie $w^{*}\in X$, że:
+$$||f-w^{*}||_2=min_{w \in X} ||f-w||_2 = min_{w \in X}\sum_{k=0}^{N} (y_k-ae^{x_k})^2 = E(a) $$
+Szukamy minimum funkcji błędu:
+$$\frac{\partial E(a)}{\partial a}=0 \Leftrightarrow a =\frac{\sum_{k=0}^{N} y_ke^{x_k}}{\sum_{k=0}^{N} e^{2x_k}} $$
+\newpage
+\section*{Model 4:}
+$$ X = \{ax + b: a,b \in R\} = \sqcap_1$$
+Znajdziemy takie $w^{*}=a^{*}x +b^{*}$, że:
+$$||f-w^{*}||_2^2 = min_{a,b,\in R} \sum_{k=0}^{N} (y_k - ax_k -b)^2=E(a,b)$$
+Funkcja błędu zależy od dwóch parametrów. Warunek konieczny dla istnienia ekstremum:
+   \[
+    \left\{\begin{array}{lr}
+        \frac{\partial E(a,b)}{\partial a} = 0 \\
+       \frac{\partial E(a,b)}{\partial b} = 0  \\
+        \end{array}\right\} 
+  \]
+  czyli:
+ \[
+    \left\{\begin{array}{lr}
+        -2\sum_{k=0}^{N}(y_k -a_{x_k} -b)x_k = 0 \\
+       -2\sum_{k=0}^{N}(y_k -a_{x_k} -b) = 0 \\
+        \end{array}\right\} 
+  \]
+Przekształcamy układ do postaci:
+ \[
+    \left\{\begin{array}{lr}
+        a\sum_{k=0}^{N}x_k^2 + b\sum_{k=0}^{N}x_k =\sum_{k=0}^{N}y_k x_k  \\
+       a\sum_{k=0}^{N}x_k^2 + b(N+1) =\sum_{k=0}^{N}y_k\\
+        \end{array}\right\} 
+  \]
+Rozwiązaniam tego układu jest:
+ \[
+    \left\{\begin{array}{lr}
+        a=\frac{(N+1)s_4 -s_1s_3}{(N+1)s_2 -s_1^2} \\
+       b= \frac{s_2s_3 - s_1s_4}{(N+1)s_2 -s_1^2}\\
+        \end{array}\right\} 
+  \]
+ gdzie:\\
+ $s_i = \sum_{k=0}^{N}x_k^i, i=1,2$\\
+ $s_3 = \sum_{k=0}^{N}y_k$\\
+ $s_4 = \sum_{k=0}^{N}x_ky_k$\\
+ \newpage
+ \section*{Wypadek ogólny}
+ Załóżmy, że $X=\{a_0g_0(x) + a_1g_1(x)+ ... +a_ng_n(x): a_k \in R\}$, gdzie g to ustalona funkcja.\\
+ Chodzi o znalezienie elementu optymalnego:
+ $$w^{*}(x) = \sum_{k=0}^{N}a_{?}^kg_k(x)$$
+ spełniającego warunek:
+ $$||f-w^{*}||_2 = min_{w \in X} ||f-w||_2$$
+ Funkcja błędu:
+ $$E(a_0,...,a_n) = \sum_{k=0}^{N}(y_k - a_0g_0(x_k)-...-a_ng_n(x_k))^2$$
+Warunek na minimalizację błędu E:
+$$\frac{\partial E(a_0,...,a_n}{\partial a_k}=0, dla k=0,1,...,m$$
+jest to układ równań liniowych z niewiadomymi $a_0,...,a_n$.
+
+
+
+
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+
+
+
+\end{document} 

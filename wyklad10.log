@@ -1,17 +1,16 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.29)  20 DEC 2016 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.8)  21 DEC 2016 17:50
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **wyklad10.tex
 (./wyklad10.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 6 language(s) loaded.
 (./kbk.cls
 Document Class: kbk 2016/10/22
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,65 +25,84 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/cyrillic/t2aenc.def
-File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ot4enc.def
+
+! Package fontenc Error: Encoding file `t2aenc.def' not found.
+(fontenc)                You might have misspelt the name of the encoding.
+
+See the fontenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \ProcessOptions*
+                      
+Necessary code for this encoding was not loaded.
+Thus calling the encoding later on will produce further error messages.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot4enc.def
 File: ot4enc.def 2005/09/27 v1.99g Standard LaTeX file
 )
 LaTeX Font Info:    Try loading font information for OT4+cmr on input line 105.
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/polski/ot4cmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/04/23 3.9r The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-russian/russianb.ldf
-Language: russianb 2016/02/18 1.3h Russian support for the Babel system
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/04/23 3.9r Babel common definitions
+! Package babel Error: Unknown option `russian'. Either you misspelled it
+(babel)                or the language definition file russian.ldf was not foun
+d.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \ProcessOptions*
+                      
+Valid options are: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-
-Package babel Warning: No input encoding specified for Russian language on inpu
-t line 110.
-
-Package babel Info: Making " an active character on input line 111.
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-polish/polish.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-polish/polish.ldf
 Language: polish 2005/03/31 v1.2l Polish support from the babel system
+Package babel Info: Making " an active character on input line 83.
 \pl@left=\dimen104
 \pl@down=\dimen105
 \pl@right=\dimen106
 \pl@temp=\dimen107
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-polish/polish.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-polish/polish.ldf
 Language: polish 2005/03/31 v1.2l Polish support from the babel system
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/utf8x.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count88
@@ -92,21 +110,22 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count89
@@ -122,35 +141,35 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen115
 \Gm@dimlist=\toks20
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count92
 ))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -161,11 +180,11 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/textpos/textpos.sty
+(/usr/share/texlive/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2014/01/03 v1.7j
 
 Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
 \TP@textbox=\box26
@@ -182,25 +201,25 @@ Grid set 16 x 16 = 37.34424pt x 52.81541pt
 \TP@tbargs=\toks21
 \TP@prevdepth=\dimen125
 TextBlockOrigin set to 0pt x 0pt
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/10 v2.15b AMS math features
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen126
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen127
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 199.
@@ -215,8 +234,8 @@ LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
 \big@size=\dimen128
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count98
 \c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
@@ -237,10 +256,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks26
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
-)
-(./wyklad10.aux)
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+) (./wyklad10.aux)
 \openout1 = `wyklad10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -255,17 +273,10 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 9.
-LaTeX Font Info:    Try loading font information for T2A+cmr on input line 9.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmr.fd
-File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 *geometry* driver: auto-detecting
@@ -302,7 +313,7 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count105
 \scratchdimen=\dimen135
@@ -315,12 +326,12 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 \MPnumerator=\count109
 \makeMPintoPDFobject=\count110
 \everyMPtoPDFconversion=\toks28
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -328,23 +339,23 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
@@ -353,32 +364,32 @@ Package etexcmds Info: Could not find \expanded.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-1.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
 LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 21.
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/polski/ot4cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Try loading font information for OT4+cmss on input line 21.
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/polski/ot4cmss.fd
+(/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmss.fd
 File: ot4cmss.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-32.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-0.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 <ccbynd.pdf, id=1, 120.45pt x 42.1575pt>
@@ -406,7 +417,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
-[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./ccbynd.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 82--84
@@ -470,35 +481,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
 [4] [5] (./wyklad10.aux) ) 
 Here is how much of TeX's memory you used:
- 5615 strings out of 493014
- 72667 string characters out of 6133350
- 145241 words of memory out of 5000000
- 9045 multiletter control sequences out of 15000+600000
+ 5295 strings out of 494877
+ 67619 string characters out of 6179086
+ 137305 words of memory out of 5000000
+ 8488 multiletter control sequences out of 15000+600000
  13786 words of font info for 42 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 38i,11n,45p,354b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/p
-l/plrm.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/pl/pltt.enc}</us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/pl/plr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
-/pl/plr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plr17.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plss10.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/pl/plss9.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/pl/plssi10.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/pl/pltt12.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/public/pl/pltt9.pfb>
-Output written on wyklad10.pdf (5 pages, 183370 bytes).
+ 56 hyphenation exceptions out of 8191
+ 38i,11n,45p,354b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plr
+m.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/pltt.enc}</usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr17.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/pl/plss10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/pl/plss9.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/pl/plssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/pl/pltt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/pltt9.pfb>
+
+Output written on wyklad10.pdf (5 pages, 183377 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

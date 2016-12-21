@@ -1,4 +1,4 @@
-% Nazwę pliku proszę zmienić na własne imię i nazwisko (bez znaków
+% Nazwę pliku proszę zmienić na własne imię i nazwisko (bez znaków
 % diakrytycznych).
 % Kompilować poleceniem pdflatex (sprawdzono w instalacji TeX Live 2014,
 % zob. https://www.tug.org/texlive/)
@@ -31,7 +31,7 @@ Skonstruować taki wielomian \(   w^{*}_m \in \Pi_{m}  \), że:
 $$ || f -  w^{*}_m ||_2 = min_{ w_m \in \Pi_m } || f - w_m||_2 = min_{ w_m \in \Pi_m } \sqrt{  \sum_{k=0}^{\infty} (y_k - w_n (x_k))^2 }$$
 \\
 \\
-Pokażemy jak szybko i efektywnie numerycznie znaleźć \(W^{*}_n \) bez konieczności rozwiązywania układów równań normalnych
+Pokażemy jak szybko i efektywnie numerycznie znaleźć \(W^{*}_n \) bez konieczności rozwiązywania układów równań normalnych
 W tym celu musimy wprowadzić szereg różnych narzędzi.
 \\
 \begin{center}
@@ -185,7 +185,7 @@ $$ a_k = \frac { (f, P_k)_N }{ (P_k, P_k)_N } $$
 \end{center}
 
 1. Wielomiany \(P_0, ... , P_m\) znajdujemy stosując związek rekurencyjny z twierdzenia.\\
-2. Wartość  \( W^{*}_m \) dla danego x obliczamy algorytmem Clenshawa \\
+2. Wartość  \( W^{*}_m \) dla danego x obliczamy algorytmem Clenshawa \\
 3. Nie trzeba pamiętać jawnej postaci \(P_0, ... , P_m\)  . Wystarczy znać wartości \(P_i(x_k)\)  \\
 4. Zachodzi związek
 $$ W^{*}_m (x) = W^{*}_{m-1}(x) + \frac{ (f, P_M)_N} {(P_m, P_m)_N} P_m(x) $$
