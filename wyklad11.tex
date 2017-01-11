@@ -1,0 +1,93 @@
+
+\documentclass[12pt]{article}
+\pagenumbering{gobble}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% Język
+\usepackage[polish]{babel}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[
+top    = 3.2cm,
+bottom = 2.50cm,
+left   = 3cm,
+right  = 3cm]{geometry}
+
+
+\usepackage{graphicx}
+\author{\LARGE Wykład 9}
+\title{\bfseries\Huge Analiza numeryczna L 2016/2017}
+\date{}
+
+ 
+\begin{document}
+
+\maketitle
+\begin{center}
+\section*{\Large Kwadratury -- całkowanie numeryczne}
+
+\end{center}
+\vspace{5mm}
+\textbf{Podstawowe całki:}\\
+$$ \int f(x)dx = F(x) + C \Leftrightarrow F'(x) = f(x)  $$
+$$ \int x^ndx = \frac{1}{n+1}x^{n+1} + C $$
+$$ \int \frac{dx}{x} = ln|x| +C $$
+$$ \int sin(x)dx = -cos(x) + C $$
+$$ \int \frac{dx}{x^2 + 1} = arctg(x) +C$$
+$$ \int xe^{x^2}dx = \frac{1}{2}e^{x^2} + C $$
+$$ \int\limits_{a}^{b}f(x)dx = F(b) - F(a) $$
+\textbf{Idea całkowania numerycznego:}\\
+f - funkcja trudna\\
+g - funkcja łatwa (do całkowania), np. wielomian\\
+$$ x \in [a,b]: f(x) \approx g(x) \Rightarrow \int\limits_{a}^{b}f(x)dx \approx \int\limits_{a}^{b}g(x)dx $$
+\newpage
+\section*{Kwadratury liniowe}
+\begin{center}
+1. $F \equiv F[a,b] $ -- zbiór funkcji całkowalnych w [a,b]\\
+2. Funkcjonał I: $I(f) = \int\limits_{a}^{b}f(x)dx$ dla $(f \in F)$
+\end{center}
+Niech dane będa parami różne liczby $x_0^{(n)}, x_1^{(n)},..., x_n^{(n)} $ \textbf{(węzły kwadratury)} oraz liczby rzeczywiste $A_0^{(n)}, A_1^{(n)},...,A_n^{(n)}$ \textbf{(współczynniki/wagi kwadratury)}. Wyrażenie postaci:
+$$ Q_n(f) = \sum_{k=0}^{n} A_k^{(n)}f(x_k^{(n)} $$
+nazywamy kwadraturą liniową.\\
+\linebreak
+\textbf{Cel:} Dobrać współczynniki $A_k^{(n)}$ oraz węzły $x_k^{(n)}$ w taki sposób, aby dla "wielu" $f \in F$ zachodziło:
+$$I(f) \approx Q_n(f)$$
+Zatem węzły i współczynniki nie powinny być bezpośrednio związane z funkcją f.\\
+\linebreak
+\textbf{Błąd kwadratury:}\\
+$$ I(f) = Q_n(f) + R_n(f)$$,
+gdzie $R_n(f)$ to błąd kwadratury.\\
+\linebreak
+\textbf{Rząd kwadratury:}\\
+Mówimy, że kwadratura liniowa $Q_n$ ma rząd \textit{r} wtw, gdy:
+$$ \forall_{ w \in \Pi_{r-1}} R_n(w) = 0 \hspace{1cm}(I(w) = Q_n(w))$$ 
+$$ \exists_{w \in \Pi_{r}/\Pi_{r-1}} R_n(w) \neq 0 \hspace{1cm}(I(w) \neq Q_n(w))$$  
+Przyjmując, że rząd kwadratury jest dobrym wyznacznikiem jej jakości, powinniśmy przy ustalonym n dążyć do zmaksymalizowania rzędu kwadratury.\\
+\linebreak
+\textbf{Twierdzenie:} Rząd kwadratury liniowej
+$$Q_n \le 2n +2 $$
+\newpage
+\section*{Kwadratury interpolacyjne}
+\textbf{Idea:} zastąpić funkcję podcałkową wielomianem interpolacyjnym dla węzłów $x_0^{(n)}, x_1^{(n)},..., x_n^{(n)} $  i całkę $ \int\limits_{a}^{b}f(x)dx$ przybiżyć całkę $\int\limits_{a}^{b}Ln(x)dx$.\\
+$$\int\limits_{a}^{b}f(x)dx \approx \int\limits_{a}^{b}Ln(x)dx = \int\limits_{a}^{b}\sum_{k=0}^n (\lambda_k(x)f(x_k))dx$$
+$$ \lambda_k(x) = \Pi_{i=0,i \neq k}^{n} \frac{x-x_i}{x_k-x_i}$$
+$$\int\limits_{a}^{b}Ln(x)dx = \sum_{k=0}^n (\int\limits_{a}^{b}\lambda_k(x)dx)f(x_k) \equiv \sum_{k=0}^n A_k^{(n)}f(x_k^{(n)} $$
+$$ I(f) = \int\limits_{a}^{b}f(x)dx \approx Q_n(f) =  \sum_{k=0}^n A_k^{(n)}f(x_k^{(n)} $$
+\linebreak
+\textbf{Twierdzenie:} Rząd kwadratury liniowej$ Q_n$ wynosi co najmniej n+1 wtw, gdy jest ona kwadraturą interpolacyjną.\\
+Wniosek: 
+$$n+1 \le rząd(Q_n) \le 2n+2 $$
+\linebreak
+\textbf{Błąd kwadratury interpolacyjnej:}\\
+Jeśli $f \in C^{n+1}[a,b]$ to błąd interpolacji wyraża się wzorem:
+$$ r_n(x) = \frac{f^{(n+1)}\eta(x)}{(n+1)!}(x-x_0)...(x-x_n)$$
+$$ \int\limits_{a}^{b}f(x)dx = \int\limits_{a}^{b}Ln(x)dx + \int\limits_{a}^{b}rn(x)dx \equiv Q_n(f) + R_n(f) $$
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+
+
+
+\end{document} 
