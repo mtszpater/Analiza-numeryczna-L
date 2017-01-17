@@ -1,0 +1,152 @@
+
+\documentclass[12pt]{article}
+\pagenumbering{gobble}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% Język
+\usepackage[polish]{babel}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[
+top    = 3.2cm,
+bottom = 2.50cm,
+left   = 3cm,
+right  = 3cm]{geometry}
+
+
+\usepackage{graphicx}
+\author{\LARGE Wykład 12}
+\title{\bfseries\Huge Analiza numeryczna L 2016/2017}
+\date{}
+
+ 
+\begin{document}
+
+\maketitle
+\begin{center}
+\section*{\Large Kwadratury złożone -- całkowanie numeryczne cz.2 }
+
+\end{center}
+\vspace{5mm}
+\section*{Kwadratury złożone}
+\textbf{Idea:}
+$$I(f) = \int^b_af(x)dx = \sum^{m-1}_{n=0} \int^{t{k+1}}_{t_k} f(x)dx$$
+Całkę $\int^{t_{k+1}}_{t_k} f(x)dx$ przybliżamy prostą kwadraturą (np. wzorem trapezów lub Simpsona).\\
+\linebreak
+
+
+\textbf{Złożony wzór trapezów:}\\
+Przyjmijmy, że $t_k=a +kh, (h = \frac{b-a}{m}, k = 0,1,2,...,m)$.
+$$\int^{t_{k+1}}_{t_k} f(x)dx = \frac{h}{2}(f(t_k) + f(t_{k+1})) - \frac{h^3}{12}f''(\eta_k)$$
+$\eta_k \in (t_k;t_{k+1})$
+$$I(f) = \int^b_af(x)dx = h\int^{t_{k+1}}_{t_k} f(x)dx = T_m(f) + R^T_m(f)$$
+gdzie $T_m(f) = h \sum^m_{k=0}f(t_k)$ -- złożony wzór trapezów.\\
+\linebreak
+Błąd złożonego wzoru trapezów:
+$$R^T_m(f) = m\frac{h^3}{12}f''(\alpha_m) = (a-b)\frac{h^2}{12}f''(\alpha_m)$$
+$\alpha_m \in (a;b)$.
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\textbf{Złożony wzór Simpsona:}\\
+Niech $m=2l, t_k=a + kh$
+$$\int^{t_{2k+2}}_{t_{2k}} f(x)dx = \frac{h}{3}(f(t_{2k} + 4f(t_{2k+1}) +f(t_{2k+2}))- \frac{h^5}{90}f^{(n)}(\beta_k)$$
+$\beta_k \in (t_{2k};t_{2k+2}$
+$$I(f) = \int^b_af(x)dx = \sum^{l-1}_{k=0} \int^{t_{2k+2}}_{t_{2k}} f(x)dx = S_m(f) + R^S_m(t)$$
+Złożony wzór Simpsona:
+$$ S_m(f) =  \frac{h}{3}(2 \sum^l_{k=0}f''(t_{2k}) + 4\sum^l_{k=1} f(t_{2k-1}))$$
+$\sum ''$ oznacza pierwszy i ostatni składnik pomnożony przez $\frac{1}{2}$\\
+\linebreak
+Błąd złożonego wzoru Simpsona:
+$$R_m^S(f) = -\frac{h^5}{90}f^{(m)}(\gamma_m) = (a-b)\frac{h^4}{180}f^{(m)}(\gamma_m)$$
+$\gamma_m \in (a;b)$
+\textbf{Twierdzenie:} Jeśli $f \in C[a,b]$, to:
+$$ lim_{n \rightarrow \inf} T_n(f) = lim_{n \rightarrow \inf} S_n(f) = \int^b_a f(x)dx $$
+\textbf{Wniosek:} złożony wzór Simpsona daje około dwa razy więcej cyfr dokładnych, niż złożony wzór trapezów.\\
+\textbf{Obserwacja:}
+$$S_m(f) = \frac{4T_m(f) - T_l(f)}{3}, (m=2l)$$
+\newpage
+\section*{Metoda Romberga}
+Niech będzie $n=2^k, h_k=\frac{b-a}{2^k}, x_i^{(k)}=a + ih_k$, czyli podział przedziału na $2^k$ części.
+$$T_{0k} = T_{2^k}(f) = h_k \sum^2k_{i=0} ''f(x_i^{(k)}$$
+Wzór metody Romberga:
+$$T_{mk} = \frac{4^mT_{m-1,k+1}-T_{m-1,k}}{4^m -1}$$ 
+W metodzie Romberga konstruujemy trójkątną tablicę przybliżeń całki I(f):\\
+$T_{00}$\\
+$T_{01} T_{10}$\\
+$T_{02} T_{11} T_{20}$\\
+.\\
+.\\
+.\\
+$T_{0m} T_{1,m-1}$ . . . $T_{m0}$\\
+\linebreak
+\textbf{Własności tablicy Romberga:}\\
+\linebreak
+$1^{o} T_mk = I(f) - c_m h^{2m+2},(a_k \neq 0, k \geq 0, m \geq 1)$\\
+\linebreak
+$2^{o} T_{mk} = sum^{2^{m+k}}_{j=0} A_j^{(m)}f(x_j^{(m+k)}), A_j > 0$\\
+\linebreak
+$3^{o}$ Kwadratury $T_{m0},T_{m1},...$ są rzędu \textbf{2m+2}\\
+\linebreak
+$4^{o} \lim_{n\rightarrow \inf} T_{mk} = I(f) $ (k- ustalone)\\
+
+$\lim_{k\rightarrow \inf} T_{mk} = I(f) $ (n- ustalone)
+\newpage
+\textbf{Idea konstrukcji kwadratury rzędu 2n+2:}\\
+Mamy 2n+2 niewiadomych -- węzły i współczynniki. Trzeba je dobrać tak, aby:
+$$
+\left\{ \begin{array}{l}
+Q_n(1) = \int^b_a 1dx\\
+Q_n(x^k) = \int^b_a x^kdx\frac{b^{k+1} - a ^{k+1}}{k+1}\\
+\end{array} \right.
+$$
+Zatem musi być:
+$$
+\left\{ \begin{array}{l}
+A_0^{(n)} + ... + A_n{(n)} = b-a\\
+A_0^{(n)}x_0^{(n)} + ... + A_n{(n)}x^{(n)}_n = \frac{b^2-a^2}{2}\\
+.\\
+.\\
+.\\
+A_0^{(n)}(x_0^{(n)})^{2n+1} + ... + A_n{(n)}(x^{(n)}_n)^{2n+1}  = \frac{b^{2n+2}-a^{2n+2}}{2n+2}\\
+\end{array} \right.
+$$
+Jest to układ 2n+2 równań nieliniowych.\\
+Można pokazać, że układ ten ma zawsze rozwiązanie. Oznacza to, że instnieje kwadratura rzędy 2n+2. Nazywamy ją kwadraturą Gaussa.
+\section*{Kwadratury Gaussa-Legendre'a}
+Wiemy, że rząd kwadratury liniowej $Q_n \leq 2n+2$.\\
+\linebreak
+Pytania:\\
+$1^{o}$ Czy isynieje kwadratura liniowa $Q_n$ mająca rząd dokładnie 2n+2?\\
+$2^{o}$ Jeśli tak, to jak znaleźć węzły i współczynniki?\\
+\linebreak
+Chodzi o znalezienie kwadratury liniowej $Q_n(f)$ przybliżającej wartości całki:
+$$I(f) = \int^b_a f(x)dx$$
+i spełniającej warunek:
+$$ \forall_{w \in \Pi_{2n+1}} Q_n(w) = \int^b_aw(x)dx$$
+\newpage
+Przyjmijmy \textbf{a = -1, b = 1}. Rozważmy tzw. kwadratury Gaussa-Legendre'a postaci:
+$$Q_n^{GL}(f) = \sum^n_{k=0} A_k^{(n)}f(x_k^{(n)})$$
+mające rząd 2n+2.\\
+\linebreak
+\textbf{Twierdzenie:} Węzłami kwadratury Gaussa-Legendre'a $Q_n^{GL}(f)$ są miejsca zerowe wieloianu  Legendre'a $P_{n+1}$, gdzie:
+$$
+\left\{ \begin{array}{l}
+P_0(x) =1 \\
+P_1(x) = x\\
+P_k(x) \frac{2k-1}{k}xP_{k-1}(x) - \frac{k-1}{k}P_{k-2}(x)\\
+\end{array} \right.
+$$
+Natomiast współczynniki tej kwadratury dane są wzorami:
+$$ A^{(n)}_k = \int^1_{-1}( \Pi^n_{i=0,i \neq k} \frac{x-x_i^{(n)}}{x_n^{(n)}-x_i^{(n)}})dx$$
+Uwagi:\\
+$1^{o}$ Wszystkie miejsca zerowe są rzeczywiste i zawarte w (-1;1).\\
+$2^{o}$ Można pokazać, że: $x_k^{(n)} = - x_{n-k}^{(n)}$ oraz $A_k^{(n)} = A_{n-k}^{(n)}$ 
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+
+
+
+\end{document} 

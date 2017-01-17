@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.8)  17 JAN 2017 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.8)  17 JAN 2017 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**wyklad11.tex
-(./wyklad11.tex
+**wyklad12.tex
+(./wyklad12.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 6 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -448,8 +448,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen119
 \Gm@dimlist=\toks18
 )
-(./wyklad11.aux)
-\openout1 = `wyklad11.aux'.
+(./wyklad12.aux)
+\openout1 = `wyklad12.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
@@ -558,102 +558,106 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 34.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 33.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 33.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 33.
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--43
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--47
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 51--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
 [2]
-Overfull \hbox (30.4945pt too wide) in paragraph at lines 72--73
-\T1/cmr/bx/n/12 Idea: \T1/cmr/m/n/12 za-st¡-pi¢ funk-cj¦ pod-caª-kow¡ wie-lo-mi
-a-nem in-ter-po-la-cyj-nym dla w¦-zªów $\OML/cmm/m/it/12 x[]; x[]; :::; x[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--80
+Underfull \hbox (badness 10000) in paragraph at lines 74--93
 
  []
 
 
-LaTeX Warning: Command \k invalid in math mode on input line 80.
-
-Missing character: There is no ¡ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
+Underfull \hbox (badness 10000) in paragraph at lines 74--93
 
  []
 
-[3] (./wyklad11.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--93
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 130--134
+
+ []
+
+[2] (./wyklad12.aux) ) 
 Here is how much of TeX's memory you used:
- 3706 strings out of 494877
- 46838 string characters out of 6179086
+ 3697 strings out of 494877
+ 46726 string characters out of 6179086
  219009 words of memory out of 5000000
- 6946 multiletter control sequences out of 15000+600000
- 14150 words of font info for 35 fonts, out of 8000000 for 9000
+ 6938 multiletter control sequences out of 15000+600000
+ 13466 words of font info for 34 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
- 38i,7n,35p,262b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,35p,246b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecti1200.600pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
-200.600pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.60
-0pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> <
-/home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk> </home/
-aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on wyklad11.pdf (3 pages, 136040 bytes).
+/ecrm1200.600pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
+200.600pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.60
+0pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk> <
+/home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb>
+Output written on wyklad12.pdf (5 pages, 148327 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 237 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
