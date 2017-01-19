@@ -1,0 +1,91 @@
+
+\documentclass[12pt]{article}
+\pagenumbering{gobble}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% Język
+\usepackage[polish]{babel}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[
+top    = 3.2cm,
+bottom = 2.50cm,
+left   = 3cm,
+right  = 3cm]{geometry}
+
+
+\usepackage{graphicx}
+\author{\LARGE Wykład 2}
+\title{\bfseries\Huge Analiza numeryczna L 2016/2017}
+\date{}
+
+ 
+\begin{document}
+
+\maketitle
+\begin{center}
+\section*{\Large Podstawowe pojęcia teorii błędów }
+\end{center}
+
+\section*{Błąd względny i bezwzględny:}
+$$ x = 1.23456789$$
+$$ x' = 1.2345679$$
+\linebreak
+\textbf{Błąd bezwzględny:} $|x-x'|=10^{-8}|$\\
+\linebreak
+\textbf{Błąd względny:} $|\frac{x-x'}{x} \approx 0.8*10^{-8}$\\
+\linebreak
+\section*{Komputerowa reprezentacja liczb:}
+\textbf{Liczby całkowite:}
+$$l \in Z : l= \pm \sum^n_{i=0} e_i2^i, (e_i \in (0;1], e_n = 1)$$
+\linebreak
+\textbf{Reprezentacja stałopozycyjna:}
+$$|\pm|e_0|e_1|e_2|...|e_n|...|e_d|$$ 
+d+1 bitóe na liczbę całkowitą ze znakiem.\\
+Nie ma problemu, jeśli n < d.\\
+Operacje +,-,*, przy założeniu, że wynik jest reprezentowalny są wykonywane dokładnie.\\
+\textbf{Liczby rzeczywiste:}
+$$ x \in R\{1,0\}: x= sm2^c, (s \in {+,-}, me \in [\frac{1}{2};1), c \in Z)$$
+\linebreak
+\textbf{Reprezentacja zmiennopozycyjna}\\
+\linebreak
+t -- liczba bitów na mantysę\\
+d-t -- liczba bitów na cechę\\
+d+1 -- liczba bitów na liczbę ze znakiem\\
+\linebreak
+$$|\pm|e_{-1}|e_{-2}| ..mantysa.. |e_{-t}|..cecha..|$$
+Ze względów technicznych mantysę musimy "przybliżać" do \textit{t} cyfr.
+$$ m_t = \sum^t_{i=1}e*_{-i}2^{-i}$$
+rd(x) -- reprezentacja zmiennopozycyjna liczby x\\
+\linebreak
+\textbf{Twierdzenie:}
+$$(x \neq 0), \frac{rd(x)-x}{x} \leq 2^{-t}$$ 
+\textbf{Fakt:} błąd zaokrąglenia mantysy nie przekracza $\frac{1}{2}2^{-t}$
+$$|m-m_t| \leq \frac{1}{2} $$
+\section*{Zbiór $X_{el}$}
+1. $m_t \in [\frac{1}{2};1)$\\
+2. $l_max = - l_min = 2^{d-t+1} -1$\\
+Czyli możmy reprezentować tylko liczby $x \neq 0$, spełniajace warunek: $\frac{1}{2D} \leq |x| < D$, gdzie $D = 2^{lm-x}$
+\textbf{Definicja:} Zbiór liczb zmiennopozycyjnych $X_{fl}$ określamy w następujący sposób:
+$$x_{fl} = rd(x)$$
+\textbf{Zmiennopozycyjna realizacja działań arytmetycznych:}
+$$ x,y \in X_{fl}: fl(x \circ y)= (x \circ y)(1+ \epsilon_0), \circ \in {+,-,*,/}, |\epsilon_0| \leq 2^{-t}$$
+$$|\frac{(x\circ y)- fl(x \circ y)}{x \circ y}| = |\epsilon_0|$$
+\textbf{Twierdzenie o kumulacji błędów:}\\
+Narzędziem pozwalającym w "prosty" sposób analizować realizację zmiennopozycyjną programów komputerowych jest tzw. twierdzenie o kumulacji błędów.\\
+\linebreak
+Jeżeli $|\sigma_i| \leq 2^{-t}, (1 \leq i \leq n)$, to zachodzi równość:
+$$\Pi^n_{i=1} (1+\sigma_i) = 1+ \eta_n$$
+gdzie $\eta_n = \sum^n_{i=1} \sigma_i + \theta(2^{-t})$\\
+Przy pewnych realistycznych założeniach (związanych z architekturą procesora) zachodzi:
+$$| \eta_n| < n2^{-t}$$
+\section*{Zjawisko utraty cyfr znaczących}
+Zmiennopozycyjne realizacje działań mnożenia i dzielenia uznaje sie za "bezpieczne". Problemy pojawiają się przy odejmowaniu (dodawaniu) liczb, szczególnie tych bliskich sobie.
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+
+
+
+\end{document} 
