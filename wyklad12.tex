@@ -61,7 +61,7 @@ $$ S_m(f) =  \frac{h}{3}(2 \sum^l_{k=0}"f(t_{2k}) + 4\sum^l_{k=1} f(t_{2k-1}))$$
 $\sum ''$ oznacza pierwszy i ostatni składnik pomnożony przez $\frac{1}{2}$\\
 \linebreak
 Błąd złożonego wzoru Simpsona:
-$$R_m^S(f) = -\frac{h^5}{90}f^{(m)}(\gamma_m) = (a-b)\frac{h^4}{180}f^{(m)}(\gamma_m)$$
+$$R_m^S(f) = -\frac{h^5}{90}f^{(4)}(\gamma_m) = (a-b)\frac{h^4}{180}f^{(4)}(\gamma_m)$$
 $\gamma_m \in (a;b)$
 \textbf{Twierdzenie:} Jeśli $f \in C[a,b]$, to:
 $$ lim_{n \rightarrow \inf} T_n(f) = lim_{n \rightarrow \inf} S_n(f) = \int^b_a f(x)dx $$
