@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.8)  22 JAN 2017 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.8)  19 JAN 2017 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**wyklad12.tex
-(./wyklad12.tex
+**wyklad5.tex
+(./wyklad5.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 6 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -447,9 +447,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
 \Gm@dimlist=\toks18
-)
-(./wyklad12.aux)
-\openout1 = `wyklad12.aux'.
+) (./wyklad5.aux)
+\openout1 = `wyklad5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
@@ -559,105 +558,68 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 34.
+(Font)              <12> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 34.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 34.
+(Font)              <6> on input line 30.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--37
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--37
+Underfull \hbox (badness 10000) in paragraph at lines 32--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--47
+Underfull \hbox (badness 10000) in paragraph at lines 32--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 58--62
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 118--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--125
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
-
- []
-
-[2] (./wyklad12.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./wyklad5.aux) ) 
 Here is how much of TeX's memory you used:
  3697 strings out of 494877
- 46726 string characters out of 6179086
- 219009 words of memory out of 5000000
+ 46717 string characters out of 6179086
+ 220008 words of memory out of 5000000
  6938 multiletter control sequences out of 15000+600000
  13466 words of font info for 34 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
- 38i,8n,35p,246b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecrm1200.600pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
-200.600pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.60
-0pk> </home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk> <
-/home/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy8.pfb>
-Output written on wyklad12.pdf (5 pages, 148343 bytes).
+ 38i,7n,35p,245b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </ho
+me/aleksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ale
+ksandra/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/aleksandr
+a/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/aleksandra/.tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk> </home/aleksandra/.texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on wyklad5.pdf (2 pages, 103259 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 176 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

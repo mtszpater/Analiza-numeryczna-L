@@ -1,0 +1,71 @@
+
+\documentclass[12pt]{article}
+\pagenumbering{gobble}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% Język
+\usepackage[polish]{babel}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[
+top    = 3.2cm,
+bottom = 2.50cm,
+left   = 3cm,
+right  = 3cm]{geometry}
+
+
+\usepackage{graphicx}
+\author{\LARGE Wykład 5}
+\title{\bfseries\Huge Analiza numeryczna L 2016/2017}
+\date{}
+
+ 
+\begin{document}
+
+\maketitle
+\begin{center}
+\section*{\Large Postać wielomianu }
+\end{center}
+$\Pi_n$ -- zbiór wielomianów stopnia $\leq$ n.\\
+\section*{Postać naturalna(potęgowa):}
+$$ w \in \Pi_n: w(x) = sum^n_{k=0} a_kx^k, (dane: a_0,a_1,..., a_n)$$
+\textbf{Schemat Hornera:}\\
+\linebreak
+$w_1 = a_1$\\
+$w_k = w_{k-1}x +a_k, (k = n-1,n-1,...0)$\\
+wtedy:\\
+$W(x) = w_0$\\
+\linebreak
+\textbf{Twierdzenie:} Algorytm Hornera jest algorytmem numerycznie poprawnym.\\
+\linebreak
+\textbf{Twierdzenie:} zachodzi następujące oznaczenie:
+$$|\frac{fl(w_0)-w(x)}{w(x)}| \leq E \frac{\sum^n_{k=0}|a_x x^k|}{\sum^n_{k=0}|a_x x^k|}$$
+\textbf{Uogólniony schemat Hornera}\\
+\linebreak
+$w_1 = b_1$\\
+$w_k = w_{k+1}(x-x_k) + b_k, (k = n-1,n-1,...,0)$\\
+wtedy $w(x) = w_0$\\
+\linebreak
+\textbf{Twierdzenie:} Uogólniony schemat Hornera jest algorytmem numerycznie poprawnym.
+\section*{Postać iloczynowa wielomianu}
+\textbf{Definicja: Wielomiany Czebyszewa}
+$$
+\left\{ \begin{array}{l}
+T_0(x) = 1, T_1(x) = x\\
+T_k(x) =2xT_{k-1}(x)-T_{k-2}(x), (k=1,2,3,...)\\
+\end{array} \right.
+$$
+\textbf{Własności wielomianu Czebyszewa:}\\
+$1^{o} T_n \in \Pi_n \setminus \Pi_{n-1}$, czyli $T_n$ jest wielomian dokładnie n-tego stopnia.\\
+$2^{o} T_n(x) = 2^{n-1}x^n+...(n \geq 1)$\\
+$3^{o}$ Dla $x in [-1;1]$ mamy:
+$$T_n(x) = cos(narcos(x))$$
+$4^{o}$
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+
+
+
+\end{document} 
