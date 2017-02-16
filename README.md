@@ -1,3 +1,4 @@
+# AKTUALNIEJSZE: https://github.com/blackdahila/Analiza-numeryczna-L
 ##TODO, do przejrzenia lub poprawienia:
 ###wyklad10.pdf
 * `Definicja - ortogonalny układ funkcji` w pierwszej lini  definicji powinno  być `N` zamiast `n`. Natomiast co do drugiej mam wątpliwości - nie powinno być (fi,fi) > 0? (Dalej to wyrażenie występuje w mianowniku!)
